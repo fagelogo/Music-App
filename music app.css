@@ -7,19 +7,22 @@ outline:none;
 
 html{height:100%}
  
-body{
-background: rgb(7, 7, 7);
+body
+{
 padding:10px;
 font-family:'arial', sans-serif;;
 color:rgb(248, 245, 245);
+background-image:url(" backgroundfp.jpg");
+background-size: cover;
 }
 
 #musicapp
 {                                     
-background: #d8d7d7;
+background-color: rgba(94, 93, 93, 0.5);
 width: 400px;
 overflow:auto;
 margin:5px auto;
+border-radius: 10px;
 }
 #controlpanel
 {
