@@ -1,0 +1,160 @@
+*
+{
+margin:0px;
+padding:0px;
+outline:none;
+}
+
+html{height:100%}
+ 
+body{
+background: rgb(7, 7, 7);
+padding:10px;
+font-family:'arial', sans-serif;;
+color:rgb(248, 245, 245);
+}
+
+#musicapp
+{                                     
+background: #d8d7d7;
+width: 400px;
+overflow:auto;
+margin:5px auto;
+}
+#controlpanel
+{
+padding:25px 25px 15px;
+overflow:auto;
+position:relative;
+}
+#albumart
+{
+width: 180px;
+height: 180px;
+border: 1px solid #eaeaea;
+position: relative;
+margin: 0 0px 0px 23px;
+/* background-image: ; */
+background-size: 220px 220px;
+}
+
+#previous, #next
+{
+content: " previous icon";
+width: 60px;
+height: 60px;
+margin-top: 67px;
+background: #c2c0c0;
+cursor:pointer;
+}
+
+#previous{float:left;}
+#next{float:right;}
+
+#previous:hover, #next:hover
+{
+box-shadow: 5px 0px 0px #cacaca,inset 0px 2px 5px #fdfdfd;
+transition:0.2s;
+}
+#previous:hover .icon
+{
+text-shadow:0px 2px 0px #cacaca;
+transition:0.2s;
+}
+
+#next:hover .icon
+{
+text-shadow:0px 2px 0px #cacaca;
+transition:0.2s;
+}
+
+.icon
+{
+transition:0.2s;
+} 
+
+
+.display{display:inline-block;}
+
+
+h1, h2
+{
+text-align: center;
+font-weight: normal;
+color: #555;
+padding:5px 15px 5px 15px;
+font-size: 16px;
+text-transform: uppercase;
+}
+h2{color:#999999;font-size: 16px;padding:0px 15px 5px 15px;}
+
+ol{
+  padding:0px 0px 15px 0px;
+  counter-reset: section;
+}
+
+ol li
+{
+list-style-type:none;
+padding:15px 25px 15px 15px;
+border-bottom:1px solid #cccccc;
+border-top:1px solid #ffffff;
+font-size:16px;
+color:#555;
+/* text-shadow:0px 2px 0px #ffffff; */
+cursor:pointer;
+text-transform: uppercase;
+}
+
+
+
+li:hover
+{
+background:#e7bc77;
+
+}
+
+.seek
+{
+float:right;
+color:#999999;
+}
+
+.selected
+{
+background:#efefef;
+}
+
+.container
+{
+  text-align: right; padding: 10px 10px 0px 0px
+}
+
+
+progress[value] {
+margin-right: 25px;
+margin-left: 25px;
+width: 350px;
+height:16px;
+border: 1px solid #efefef; /* seek bar */
+margin-bottom:1px; 
+}
+
+progress[value]::-webkit-progress-bar {
+background-color: rgb(7, 7, 7);
+border-radius: 0px;
+}
+
+progress[value]::-webkit-progress-value {
+background:#f5ed85;
+}
+
+/* CSS3 Counter */
+
+li:before {
+  counter-increment: section;      /* Increment the section counter */
+  content: "" counter(section) ""; /* Display the counter */
+  padding:0px 15px;
+  color:#0a0a0a;
+  /* text-shadow:0px 2px 0px #afaeae; */
+}
