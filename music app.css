@@ -1,238 +1,192 @@
-*
-{
-margin:0px;
-padding:0px;
-outline:none;
-box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: Nunito, sans-serif;
 }
 
-html{height:100%;
-width: 100%;}
- 
-body
-{
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
   margin-top: 80px;
-padding:10px;
-font-family:'arial', sans-serif;;
-color:rgb(248, 245, 245);
-background-image:url("./backgroundfp.jpg");
-/* background: rgb(252, 249, 249); */
-/* height: 700px; */
-background-size: cover;
+  padding: 10px;
+  color: rgb(248, 245, 245);
+  background-image: url("./backgroundfp.jpg");
+  background-size: cover;
 }
 
-#musicapp
-{                                     
-background-color: rgba(214, 214, 214, 0.5);
-width: 420px;
-overflow:auto;
-margin:5px auto;
-border-radius: 10px;
-/* background-image:url(" backgroundfp.jpg"); */
-/* border: rgb(248, 244, 244) solid 1px; */
-
+#musicapp {
+  background-color: rgba(214, 214, 214, 0.5);
+  width: 420px;
+  overflow: auto;
+  margin: 5px auto;
+  border-radius: 10px;
+  
 }
-#controlpanel
-{
-padding:25px 25px 15px;
-overflow:auto;
-position:relative;
+#controlpanel {
+  padding: 25px 25px 15px;
+  overflow: auto;
+  position: relative;
 }
-img{
+img {
   margin-top: 40px;
   margin-left: 40px;
-  /* transform: scale(); */
-  cursor:pointer;
+  cursor: pointer;
 }
-img:hover{
-  
+img:hover {
   transform: scale(110%);
-  transition:0.2s;
+  transition: 0.2s;
 }
-#albumart
-{
-width: 180px;
-height: 180px;
-/* border: 1px solid #e7adad; */
-/* position: relative; */
-margin: 0 0px 0px 35px;
-/* background-image: red; */
-background-size: 220px 220px;
-background-position: center;
-/* background-size: 70%; */
-background-repeat: no-repeat;
-
+#playview {
+  width: 180px;
+  height: 180px;
+  margin: 0 0px 0px 35px;
+  background-size: 220px 220px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#previous
-{
-/* content: " previous icon"; */
-width: 60px;
-height: 60px;
-margin-top: 67px;
-/* background-image: url("/icons/nexticon.png"); */
-background-position: center;
-background-size: 70%;
-background-repeat: no-repeat;
-cursor:pointer;
-border-radius: 50%;
-
+#previous {
+  width: 60px;
+  height: 60px;
+  margin-top: 67px;
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 50%;
 }
-#next
-{
-/* content: " previous icon"; */
-width: 60px;
-height: 60px;
-margin-top: 67px;
-background-position: center;
-background-size: 70%;
-background-repeat: no-repeat;
-/* background-image: url("/icons/nexticon.png"); */
-cursor:pointer;
-border-radius: 50%;
+#next {
+  width: 60px;
+  height: 60px;
+  margin-top: 67px;
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
-#previous{float:left;}
-#next{float:right;}
-
-#previous:hover, #next:hover
-{
-box-shadow: 5px 0px 0px #cacaca,inset 0px 2px 5px #fdfdfd;
-transition:0.2s;
+#previous {
+  float: left;
 }
-#previous:hover
-{
-text-shadow:0px 2px 0px #cacaca;
-transition:0.2s;
+#next {
+  float: right;
 }
 
-#next:hover 
-{
-text-shadow:0px 2px 0px #cacaca;
-transition:0.2s;
+#previous:hover,
+#next:hover {
+  box-shadow: 5px 0px 0px #cacaca, inset 0px 2px 5px #fdfdfd;
+  transition: 0.2s;
+}
+#previous:hover {
+  text-shadow: 0px 2px 0px #cacaca;
+  transition: 0.2s;
 }
 
-/* .icon
-{
-transition:0.2s;
-}  */
-
-
-.display{display:inline-block;}
-
-
-h1, h2
-{
-text-align: center;
-font-weight: normal;
-color: rgb(7, 7, 7);
-padding:5px 15px 5px 15px;
-font-size: 16px;
-text-transform: uppercase;
+#next:hover {
+  text-shadow: 0px 2px 0px #cacaca;
+  transition: 0.2s;
 }
-h2{color:#fdfdfd;font-size: 16px;padding:0px 15px 5px 15px;}
 
-ol{
-  padding:0px 0px 15px 0px;
+
+.display {
+  display: inline-block;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-weight: normal;
+  color: rgb(7, 7, 7);
+  padding: 5px 15px 5px 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+h2 {
+  color: #fdfdfd;
+  font-size: 16px;
+  padding: 0px 15px 5px 15px;
+}
+
+ol {
+  padding: 0px 0px 15px 0px;
   counter-reset: section;
 }
 
- li
-{
-list-style-type:none;
-padding:15px 25px 15px 15px;
-border-bottom:1px solid #636262;
-border-top:1px solid #797777;
-font-size:16px;
-color:rgb(252, 247, 247);
-/* text-shadow:0px 2px 0px #ffffff; */
-cursor:pointer;
-text-transform: uppercase;
-background: rgb(8, 8, 8);
+li {
+  list-style-type: none;
+  padding: 15px 25px 15px 15px;
+  border-bottom: 1px solid #636262;
+  border-top: 1px solid #797777;
+  font-size: 16px;
+  color: rgb(252, 247, 247);
+  cursor: pointer;
+  text-transform: uppercase;
+  background: rgb(8, 8, 8);
 }
 
-
-
-li:hover
-{
-background:#e7bc77;
-
+li:hover {
+  background: #e7bc77;
 }
 
-.seek
-{
-float:right;
-color:none;
+.seek {
+  float: right;
+  color: none;
 }
 
-.selected
-{
-background:#080808;
-}
-
-.container
-{
+.container {
   text-align: center;
   border-radius: 8px;
   background: black;
   height: 30px;
   padding-top: 5px;
-  /* margin-top: 10px; */
   width: 300px;
   margin: 15px auto 0px auto;
 }
 
-
 progress[value] {
-margin-right: 25px;
-margin-left: 35px;
-width: 350px;
-height:16px;
-margin-bottom:20px;
+  margin-right: 25px;
+  margin-left: 35px;
+  width: 350px;
+  height: 16px;
+  margin-bottom: 20px;
 }
-progress{
-  background :white ;
+progress {
+  background: white;
 }
 
 progress[value]::-webkit-progress-bar {
-background-color:black;
-border-radius: 2px;
+  background-color: black;
+  border-radius: 2px;
 }
 
 progress[value]::-webkit-progress-value {
-background:#fcfafa;
+  background: #fcfafa;
 }
 
-/* CSS3 Counter */
-
-li:before {
-  counter-increment: section;      /* Increment the section counter */
-  content: "" counter(section) ""; /* Display the counter */
-  padding:0px 15px;
-  color:#0a0a0a;
-  /* text-shadow:0px 2px 0px #afaeae; */
-}
-@media screen and (max-width:768px){
-  #musicapp{
-    margin-top:30px;
+@media screen and (max-width: 768px) {
+  #musicapp {
+    margin-top: 30px;
     transform: scale(0.9);
     padding: 25px;
-  /* align-self: center;} */
-  margin-left:-10px;
-  background-color: rgb(252, 249, 249);
-}
-#controlpanel{
-  padding:0;
-  
- 
-}
-body{
-  background-color:rgba(214, 214, 214, 0.5); ;
-}
-progress[value]{
-  margin-left: 0px;
-}
-.container{
-  margin-bottom: 20px;
-}
+    margin-left: -11px;
+    background-color: rgb(252, 249, 249);
+  }
+  #controlpanel {
+    padding: 0;
+  }
+  body {
+    background-color: rgba(214, 214, 214, 0.5);
+  }
+  progress[value] {
+    margin-left: 0px;
+  }
+  .container {
+    margin-bottom: 20px;
+  }
 }
