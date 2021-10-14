@@ -1,5 +1,5 @@
 window.onload = () => {
-    const albumart = document.querySelector('#albumart');
+    // const albumart = document.querySelector('#albumart');
     const song_title = document.querySelector('#title');
     const song_artist = document.querySelector('#artist');
 
@@ -35,7 +35,7 @@ window.onload = () => {
                 if (audio_player.paused) {
                     audio_player.play();
                     document.getElementById('playicon').src="./icons/pauseicon.png";
-                    document.getElementById('list').innerHTML= songs.title
+                    // document.getElementById('list').innerHTML= songs.title
 
                    
                 } else {
@@ -64,7 +64,7 @@ window.onload = () => {
         function UpdatePlayer() {
             let song = songs[current_song_index];
     
-            albumart.style = "background-image: url( "+song.img_path +");";
+            // albumart.style = "background-image: url( "+song.img_path +");";
             song_title.innerText = song.title;
             song_artist.innerText = song.artist;
             audio_player.src = song.song_path;

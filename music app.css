@@ -11,12 +11,14 @@ width: 100%;}
  
 body
 {
+  margin-top: 80px;
 padding:10px;
 font-family:'arial', sans-serif;;
 color:rgb(248, 245, 245);
-/* background-image:url(" backgroundfp.jpg"); */
-background: rgb(12, 12, 12);
+background-image:url("./backgroundfp.jpg");
+/* background: rgb(252, 249, 249); */
 /* height: 700px; */
+background-size: cover;
 }
 
 #musicapp
@@ -27,7 +29,7 @@ overflow:auto;
 margin:5px auto;
 border-radius: 10px;
 /* background-image:url(" backgroundfp.jpg"); */
-border: rgb(248, 244, 244) solid 1px;
+/* border: rgb(248, 244, 244) solid 1px; */
 
 }
 #controlpanel
@@ -40,6 +42,7 @@ img{
   margin-top: 40px;
   margin-left: 40px;
   /* transform: scale(); */
+  cursor:pointer;
 }
 img:hover{
   
@@ -72,6 +75,7 @@ background-position: center;
 background-size: 70%;
 background-repeat: no-repeat;
 cursor:pointer;
+border-radius: 50%;
 
 }
 #next
@@ -85,6 +89,7 @@ background-size: 70%;
 background-repeat: no-repeat;
 /* background-image: url("/icons/nexticon.png"); */
 cursor:pointer;
+border-radius: 50%;
 }
 
 #previous{float:left;}
@@ -120,30 +125,30 @@ h1, h2
 {
 text-align: center;
 font-weight: normal;
-color: #555;
+color: rgb(7, 7, 7);
 padding:5px 15px 5px 15px;
 font-size: 16px;
 text-transform: uppercase;
 }
-h2{color:#999999;font-size: 16px;padding:0px 15px 5px 15px;}
+h2{color:#fdfdfd;font-size: 16px;padding:0px 15px 5px 15px;}
 
 ol{
   padding:0px 0px 15px 0px;
   counter-reset: section;
 }
 
-ol li
+ li
 {
 list-style-type:none;
 padding:15px 25px 15px 15px;
 border-bottom:1px solid #636262;
 border-top:1px solid #797777;
 font-size:16px;
-color:#555;
+color:rgb(252, 247, 247);
 /* text-shadow:0px 2px 0px #ffffff; */
 cursor:pointer;
 text-transform: uppercase;
-background: honeydew;
+background: rgb(8, 8, 8);
 }
 
 
@@ -162,7 +167,7 @@ color:none;
 
 .selected
 {
-background:#efefef;
+background:#080808;
 }
 
 .container
@@ -183,19 +188,19 @@ margin-right: 25px;
 margin-left: 35px;
 width: 350px;
 height:16px;
-margin-bottom:20px; 
+margin-bottom:20px;
 }
 progress{
   background :white ;
 }
 
 progress[value]::-webkit-progress-bar {
-background-color:none;
-border-radius: 0px;
+background-color:black;
+border-radius: 2px;
 }
 
 progress[value]::-webkit-progress-value {
-background:#050505;
+background:#fcfafa;
 }
 
 /* CSS3 Counter */
@@ -214,11 +219,15 @@ li:before {
     padding: 25px;
   /* align-self: center;} */
   margin-left:-10px;
+  background-color: rgb(252, 249, 249);
 }
 #controlpanel{
   padding:0;
   
-  
+ 
+}
+body{
+  background-color:rgba(214, 214, 214, 0.5); ;
 }
 progress[value]{
   margin-left: 0px;
