@@ -3,26 +3,32 @@
 margin:0px;
 padding:0px;
 outline:none;
+box-sizing: border-box;
 }
 
-html{height:100%}
+html{height:100%;
+width: 100%;}
  
 body
 {
 padding:10px;
 font-family:'arial', sans-serif;;
 color:rgb(248, 245, 245);
-background-image:url(" backgroundfp.jpg");
-background-size: cover;
+/* background-image:url(" backgroundfp.jpg"); */
+background: rgb(12, 12, 12);
+/* height: 700px; */
 }
 
 #musicapp
 {                                     
-background-color: rgba(94, 93, 93, 0.5);
-width: 400px;
+background-color: rgba(214, 214, 214, 0.5);
+width: 420px;
 overflow:auto;
 margin:5px auto;
 border-radius: 10px;
+/* background-image:url(" backgroundfp.jpg"); */
+border: rgb(248, 244, 244) solid 1px;
+
 }
 #controlpanel
 {
@@ -34,11 +40,12 @@ position:relative;
 {
 width: 180px;
 height: 180px;
-border: 1px solid #eaeaea;
-position: relative;
-margin: 0 0px 0px 23px;
-/* background-image: ; */
+/* border: 1px solid #e7adad; */
+/* position: relative; */
+margin: 0 0px 0px 35px;
+/* background-image: red; */
 background-size: 220px 220px;
+background-position: center;
 }
 
 #previous, #next
@@ -100,13 +107,14 @@ ol li
 {
 list-style-type:none;
 padding:15px 25px 15px 15px;
-border-bottom:1px solid #cccccc;
-border-top:1px solid #ffffff;
+border-bottom:1px solid #636262;
+border-top:1px solid #797777;
 font-size:16px;
 color:#555;
 /* text-shadow:0px 2px 0px #ffffff; */
 cursor:pointer;
 text-transform: uppercase;
+background: honeydew;
 }
 
 
@@ -130,7 +138,14 @@ background:#efefef;
 
 .container
 {
-  text-align: right; padding: 10px 10px 0px 0px
+  text-align: center;
+  border-radius: 8px;
+  background: black;
+  height: 30px;
+  padding-top: 5px;
+  /* margin-top: 10px; */
+  width: 300px;
+  margin: 15px auto 0px auto;
 }
 
 
@@ -140,16 +155,16 @@ margin-left: 25px;
 width: 350px;
 height:16px;
 border: 1px solid #efefef; /* seek bar */
-margin-bottom:1px; 
+margin-bottom:20px; 
 }
 
 progress[value]::-webkit-progress-bar {
-background-color: rgb(7, 7, 7);
+background-color:none;
 border-radius: 0px;
 }
 
 progress[value]::-webkit-progress-value {
-background:#f5ed85;
+background:#050505;
 }
 
 /* CSS3 Counter */
@@ -160,4 +175,24 @@ li:before {
   padding:0px 15px;
   color:#0a0a0a;
   /* text-shadow:0px 2px 0px #afaeae; */
+}
+@media screen and (max-width:768px){
+  #musicapp{
+    margin-top:30px;
+    transform: scale(0.9);
+    padding: 25px;
+  /* align-self: center;} */
+  margin-left:-10px;
+}
+#controlpanel{
+  padding:0;
+  
+  
+}
+progress[value]{
+  margin-left: 0px;
+}
+.container{
+  margin-bottom: 20px;
+}
 }
