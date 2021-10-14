@@ -157,7 +157,7 @@ background:#e7bc77;
 .seek
 {
 float:right;
-color:#999999;
+color:none;
 }
 
 .selected
@@ -180,11 +180,13 @@ background:#efefef;
 
 progress[value] {
 margin-right: 25px;
-margin-left: 25px;
+margin-left: 35px;
 width: 350px;
 height:16px;
-border: 1px solid #efefef; /* seek bar */
 margin-bottom:20px; 
+}
+progress{
+  background :white ;
 }
 
 progress[value]::-webkit-progress-bar {

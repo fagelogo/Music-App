@@ -3,7 +3,7 @@ window.onload = () => {
     const song_title = document.querySelector('#title');
     const song_artist = document.querySelector('#artist');
 
-    // const play_btn = document.querySelector('#list');
+    const list = document.querySelector('#list');
     const play_btn = document.querySelector('#playicon');
     const prev_btn = document.querySelector('#previous');
     const next_btn = document.querySelector('#next');
@@ -17,31 +17,31 @@ window.onload = () => {
     let next_song_index;
 
     const songs = [
-    {          
+    {         
             title: 'Courage',
                     artist: "Celine Dion",
                     song_path: 'music/celine_dion_courage.mp3',
                     img_path: 'images/celine.png'
-                },
+    },
                 {
                     title: "Your Man",
                     artist: "Josh Turner",
                     song_path: 'music/your_man_by_josh_turner.mp3',
                     img_path: 'images/josh.jpg'
-                },
+},
             ];
 
             function TogglePlaySong () {
                 if (audio_player.paused) {
                     audio_player.play();
                     document.getElementById('playicon').src="./icons/pauseicon.png";
-                    // play_btn_icon.classList.remove('fa-play')
-                    // play_btn_icon.classList.add('fa-pause');
+                    document.getElementById('list').innerHTML= songs.title
+
+                   
                 } else {
                     audio_player.pause();
                     document.getElementById('playicon').src="./icons/playicon.png";
-                    // play_btn.classList.add('fa-play')
-                    // play_btn_icon.classList.remove('fa-pause');
+                    
                 }
             }
 
@@ -96,5 +96,27 @@ window.onload = () => {
             TogglePlaySong();
         }
     
-        
+        var timer;
+var percent = 0;
+audio_player.addEventListener("playing", function(_event) {
+  var duration = _event.target.duration;
+  advance(duration, audio_player);
+});
+audio_player.addEventListener("pause", function(_event) {
+  clearTimeout(timer);
+});
+var advance = function(duration, element) {
+  var progress = document.getElementById("seek");
+  increment = 10/duration
+  percent = Math.min(increment * element.currentTime * 10, 100);
+  progress.style.width = percent+'%'
+  startTimer(duration, element);
+}
+var startTimer = function(duration, element){ 
+  if(percent < 100) {
+    timer = setTimeout(function (){advance(duration, element)}, 100);
+  }
+}
+
+
     }
